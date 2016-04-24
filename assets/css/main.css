@@ -128,11 +128,26 @@ body {
     font-family: 'Proxima Reg', sans-serif;
 }
 
+section:not(.hero) {
+    padding-top: 80px;
+}
+
+/* Color choice __ CLR */
+
+/*
+// #4B3D3D - dark gray
+// #FAF8F8 - light
+// #CE5253 - main
+// #46AE45 - accent
+// #3F963D - accent hover
+
+*/
+
 
 /* Jumbotron Section __ JMBSCT*/
 
 .fullscreen {
-    background-image: url("../img/jumbotron-opt.jpg");
+    background-image: url("../img/jumbotron-opt-grayscale.jpg");
     background-size: cover;
     min-height: 100vh;
 }
@@ -150,15 +165,28 @@ body {
     text-align: center;
 }
 
+.text-left {
+    text-align: left;
+}
+
 .hero .vs-dark {
-    color: #fff;
+    color: #FAF8F8;
 }
 
 .hero .vs-light {
-    color: #121212;
+    color: #4B3D3D;
 }
 
-.hero ul {
+.bg-btn {
+    background: #46AE45;
+    border-color: #faf8f8;
+}
+
+.bg-dark {
+    background: #4b3d3d;
+}
+
+.list-reset {
     list-style: none;
     padding-left: 0;
 }
@@ -175,10 +203,8 @@ body {
 }
 
 .jumbotron__header p {
-    color: #121212;
     display: inline-block;
     padding: 0.5em;
-    background: #fdfd98;
 }
 
 .jumbotron__header {
@@ -187,6 +213,7 @@ body {
 
 .flex {
     display: flex;
+    flex-wrap: wrap;
 }
 
 .flex--column {
@@ -199,27 +226,56 @@ body {
     justify-content: space-between;
 }
 
+.flex--center {
+    justify-content: center;
+}
+
 .flex--around {
     justify-content: space-around;
 }
 
 .anchor {
     padding: 0.5em 1.5em;
-    border: 2px solid #fff;
-    background: url("../../assets/img/text-bg-accent.png");
     transition: all 0.25s ease;
 }
 
 .anchor:hover {
-    color: #121212;
-    background: url("../../assets/img/text-bg-accent-inv.png");
+    background: #3F963D;
 }
 
 
+/* Introduction Section __ INTSCT */
 
 
+.section-intro {
+    margin: 40px 0;
+}
+
+.subsection__text {
+    font-size: 16px;
+}
+
+.section-content {
+    margin-top: 20px;
+}
 
 
+/* Performer Section __ PRFSCT */
+
+.performer .row:nth-of-type(2) {
+    margin-top: 40px;
+}
+
+.gallery > figure {
+    margin: 4px;
+}
+
+/* Footer Section __ FTSCT */
+
+.main-footer {
+    background: #4B3D3D;
+    padding: 20px;
+}
 
 
 
