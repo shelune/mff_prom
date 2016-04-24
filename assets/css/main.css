@@ -157,8 +157,8 @@ section:not(.hero) {
 }
 
 .jumbotron__logo {
-    max-width: 400px;
-    min-width: 200px;
+    width: 400px;
+    min-width: 160px;
 }
 
 .text-center {
@@ -169,11 +169,11 @@ section:not(.hero) {
     text-align: left;
 }
 
-.hero .vs-dark {
+.vs-dark.vs-dark {
     color: #FAF8F8;
 }
 
-.hero .vs-light {
+.vs-light.vs-light {
     color: #4B3D3D;
 }
 
@@ -191,9 +191,17 @@ section:not(.hero) {
     padding-left: 0;
 }
 
-.hero ul a {
+.list-reset a {
     text-decoration: none;
+}
+
+.site-anchors {
     font-size: 24px;
+    width: 100%;
+}
+
+.hero ul a {
+    font-size: inherit;
 }
 
 .jumbotron .header.jumbotron__header-text {
@@ -243,6 +251,11 @@ section:not(.hero) {
     background: #3F963D;
 }
 
+.hero .subtitle {
+    margin-bottom: auto;
+    padding: 0.5em;
+}
+
 
 /* Introduction Section __ INTSCT */
 
@@ -268,6 +281,7 @@ section:not(.hero) {
 
 .gallery > figure {
     margin: 4px;
+
 }
 
 /* Footer Section __ FTSCT */
@@ -275,6 +289,15 @@ section:not(.hero) {
 .main-footer {
     background: #4B3D3D;
     padding: 20px;
+}
+
+.footer__nav ul {
+    margin-top: 10px;
+}
+
+.footer__nav li {
+    margin: 0 12px;
+    font-size: 16px;
 }
 
 
@@ -359,8 +382,58 @@ section:not(.hero) {
    Modify as content requires.
    ========================================================================== */
 
-@media only screen and (min-width: 35em) {
-    /* Style adjustments for viewports that meet the condition */
+/* Iphone 4 ~~~~ */
+@media only screen and (max-width: 20em) {
+    
+}
+
+/* Iphone 5 ~~~~ */
+
+@media only screen and (max-width: 24em) {
+    .jumbotron__logo {
+        width: 160px;
+    }
+
+    .hero {
+        font-size: 16px;
+    }
+
+    .jumbotron .header.jumbotron__header-text {
+        margin-top: auto;
+        font-size: 40px;
+    }
+
+    .hero .subtitle {
+        font-size: 16px;
+        max-width: 80vw;
+        padding: 0.25em;
+    }
+
+    .site-anchors {
+        font-size: 16px;
+        margin: 0 auto;
+        margin-top: 40px;
+    }
+
+    .site-anchors li {
+        flex-basis: 40%;
+        margin: 10px 10px 0;
+    }
+
+    .site-anchors a {
+        width: 100%;
+        display: block;
+    }
+}
+
+/* Tablet ~~~~ */
+
+@media only screen and (max-width: 44em) {
+    
+}
+
+@media only screen and (max-width: 60em) {
+    
 }
 
 @media print,
