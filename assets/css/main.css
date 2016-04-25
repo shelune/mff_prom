@@ -329,7 +329,7 @@ section:not(:first-of-type) {
 
 .news-post {
     border-bottom: 1px solid rgba(0, 0, 0, 0.4);
-    display: flex;
+    overflow: hidden;
     padding: 40px 0;
 }
 
@@ -353,6 +353,20 @@ section:not(:first-of-type) {
 
 .news-post header {
     margin-bottom: 20px;
+}
+
+.btn--default {
+    border-radius: 0;
+    background: transparent;
+    color: #000;
+    border-color: #000;
+    transition: 0.25s ease all;
+}
+
+.btn--default:hover {
+    background: #000;
+    color: #fff;
+    border-color: darkgray;
 }
 
 /* ==========================================================================
@@ -496,7 +510,19 @@ section:not(:first-of-type) {
 }
 
 @media only screen and (max-width: 60em) {
-    
+    .news-post header {
+        margin-top: 20px;
+    }
+
+    .news-title {
+        margin-bottom: 10px;
+        flex-basis: 100%;
+    }
+
+    .news-metadata {
+        flex-basis: 100%;
+        margin-left: -8px;
+    }
 }
 
 @media print,
