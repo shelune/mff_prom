@@ -333,7 +333,7 @@ section:not(:first-of-type) {
     padding: 40px 0;
 }
 
-.news .main-content {
+.news .main-content, .news .side-content {
     margin: 80px 0;
 }
 
@@ -367,6 +367,26 @@ section:not(:first-of-type) {
     background: #000;
     color: #fff;
     border-color: darkgray;
+}
+
+.widget {
+    padding: 10px 10px;
+    border: solid 1px #ddd;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.widget-title {
+    padding-bottom: 10px;
+    border-bottom: solid 1px #ddd;
+}
+
+.input--email {
+    margin: 8px 0;
+}
+
+.btn--full {
+    width: 100%;
 }
 
 /* ==========================================================================
