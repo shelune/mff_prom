@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title></title>
+        <title>Blog Post</title>
         <meta name="description" content="">
         <meta name="author" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -14,7 +14,7 @@
         <link rel="stylesheet" href="assets/css/bootstrap.min.css">
         <link rel="stylesheet" href="assets/css/main.css">
     </head>
-    <body class="news">
+    <body class="news post">
         <!--[if lt IE 8]>
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
@@ -49,59 +49,82 @@
         </header>
         
         <!-- News section -->
-        <section class="featured" data-type="background" data-speed="3">
-            <h1 class="vs-dark text-center">News</h1>
-        </section>
 
         <div class="container">
             <div class="row" id="primary">
-                <main class="main-content col-sm-8" role="main">
-                    <article class="news-post">
-                        <div class="col-md-4 col-sm-12">
-                            <div class="news-image">
-                                <img class="img-responsive" src="http://placehold.it/1200x700" alt="">
-                            </div>
-                        </div>
-                        <div class="col-md-8 col-sm-12">
-                            <header class="flex">
-                                <h3 class="news-title"><a class="vs-light link-reset" href="post.html">Blog Title</a></h3>
+                <div class="col-sm-8" id="content">
+                    <article class="post">
+                        <header class="post-header">
+                            <img src="http://placehold.it/1920x1080" alt="" class="post-banner img-responsive">
+                            <div class="post-info flex">
+                                <h1 class="post-title">Blog Title</h1>
                                 <div class="news-metadata flex flex-item--pull-right">
                                     <span><i class="fa fa-user"></i>MFF</span>
                                     <span><i class="fa fa-calendar"></i><time>April 25th, 2016</time></span>
                                     <span><i class="fa fa-tags"></i><a href="#">Tag 1</a>, <a href="#">Tag 2</a></span>
                                 </div>
-                            </header>
-                            <div class="news-excerpt">
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque eveniet, veniam voluptas, voluptatibus esse ducimus illum molestias provident beatae repellendus ea optio aut at assumenda. Accusamus quasi sed suscipit, eaque.</p>
-                                <button type="button" class="btn btn-primary pull-right btn--default">READ MORE</button>
                             </div>
+                        </header>
+                        <div class="post-content">
+                            <h3>A small title</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita nobis, soluta ad accusamus id magni officiis itaque harum, sed accusantium non alias odit minima possimus assumenda doloremque nemo quos amet.</p>
+
+                            <h3>Another small title</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt, repudiandae, voluptate. Voluptatem ad excepturi blanditiis ullam sunt voluptatibus aliquid, error deleniti molestiae illo expedita fugiat? Porro nesciunt dolorum ad nulla!</p>
+
+                            <h4>A smaller title?</h4>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil voluptates vero eius, iusto corporis ut commodi sint nobis aspernatur architecto temporibus deserunt blanditiis voluptas atque ea impedit quisquam at laborum.</p>
                         </div>
                     </article>
 
-                    <article class="news-post">
-                        <div class="col-sm-4">
-                            <div class="news-image">
-                                <img class="img-responsive" src="http://placehold.it/1200x700" alt="">
-                            </div>
-                        </div>
-                        <div class="col-sm-8">
-                            <header class="flex">
-                                <h3 class="news-title"><a class="vs-light link-reset" href="">Blog Title</a></h3>
-                                <div class="news-metadata flex flex-item--pull-right">
-                                    <i class="fa fa-user"></i>MFF
-                                    <i class="fa fa-calendar"></i><time>April 25th, 2016</time>
-                                    <i class="fa fa-tags"></i><a href="#">Tag 1</a>, <a href="#">Tag 2</a>
-                                </div>
-                            </header>
-                            <div class="news-excerpt">
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque eveniet, veniam voluptas, voluptatibus esse ducimus illum molestias provident beatae repellendus ea optio aut at assumenda. Accusamus quasi sed suscipit, eaque.</p>
-                                <button type="button" class="btn btn-primary pull-right">READ MORE</button>
-                            </div>
-                        </div>
-                    </article>
-                </main>
+                    <div id="comments" class="comments-content">
+                        <div class="comments-wrap">
+                            <h3 class="comments-count">10 comments</h3>
 
-                <aside class="side-content col-sm-3 col-sm-offset-1">
+                            <ol class="comments-list list-reset">
+                                <li class="comment">
+                                    <h4 class="comment-author">Swaggity Swut</h4>
+                                    <div class="comment-body">
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto magnam, nihil eos rerum! Libero dignissimos officiis beatae, qui eveniet velit.</p>
+                                    </div>
+
+                                    <ol class="children">
+                                        <li class="comment">
+                                            <h4 class="comment-author">Comingy Fority</h4>
+                                            <div class="comment-body">
+                                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore optio quos at facere omnis minus illum qui dolores similique repellendus.</p>
+                                            </div>
+                                        </li>
+                                    </ol>
+                                </li>
+                            </ol>
+
+                            <div id="leave-comment">
+                                <h3 class="text-center">Leave a comment</h3>
+                                <form>
+                                    <p>Your email address is not published. Required fields are marked <span class="required">*</span></p>
+                                    <p class="comment-form__author">
+                                        <label for="author">Name *</label>
+                                        <input type="text" id="author" required>
+                                    </p>
+                                    <p class="comment-form__email">
+                                        <label for="email">Email *</label>
+                                        <input type="email" id="email" required>
+                                    </p>
+                                    <p class="comment-form__comment">
+                                        <label for="comment">Comment *</label>
+                                        <textarea type="email" id="comment" cols="45" rows="8" required></textarea>
+                                    </p>
+                                    <p class="form-submit">
+                                        <input type="submit" name="submit" class="btn btn-primary btn--submit" value="Submit">
+                                    </p>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <aside class="side-content col-md-3 col-md-offset-1 col-sm-4">
                     <div class="widget widget--search">
                         <h4 class="widget-title text-center">Search posts</h4>
                         <form role="form" class="search-form">

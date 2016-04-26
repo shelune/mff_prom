@@ -254,7 +254,6 @@ section:not(:first-of-type) {
 }
 
 .hero .subtitle {
-    margin-bottom: auto;
     padding: 0.5em;
 }
 
@@ -293,7 +292,7 @@ section:not(:first-of-type) {
 /* Footer Section __ FTSCT */
 
 .main-footer {
-    background: #4B3D3D;
+    background: #101010;
     padding: 20px;
 }
 
@@ -307,6 +306,22 @@ section:not(:first-of-type) {
 }
 
 /* NEWS PAGE __ NWSPG*/
+
+.flex-item--pull-right {
+    margin-left: auto;
+}
+
+.flex-item--pull-up {
+    margin-bottom: auto;
+}
+
+.flex-item--pull-down {
+    margin-top: auto;
+}
+
+.flex-item--pull-left {
+    margin-right: auto;
+}
 
 .news {
     margin-top: 50px;
@@ -334,7 +349,8 @@ section:not(:first-of-type) {
 }
 
 .news .main-content, .news .side-content {
-    margin: 80px 0;
+    margin-top: 80px;
+    margin-bottom: 80px;
 }
 
 .news-title {
@@ -344,7 +360,6 @@ section:not(:first-of-type) {
 
 .news-metadata {
     margin-bottom: 5px;
-    margin-left: auto;
 }
 
 .news-metadata i {
@@ -389,6 +404,56 @@ section:not(:first-of-type) {
     width: 100%;
 }
 
+/* NEWS POST PAGE __ PSTPG*/
+
+.post .news-metadata {
+    margin-top: 20px;
+}
+
+article.post {
+    margin-top: 80px;
+    margin-bottom: 80px;
+}
+
+.post-info {
+    align-items: center;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+.comments-content {
+    padding: 10px 20px;
+    background: rgba(0, 0, 0, 0.05);
+}
+
+.comments-count {
+    text-align: center;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #ddd;
+}
+
+.comments-list {
+    margin-top: 40px;
+}
+
+#leave-comment > h3 {
+    margin-top: 80px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #ddd;
+}
+
+#leave-comment label {
+    display: block;
+}
+
+#leave-comment input, #leave-comment textarea {
+    width: 100%;
+}
+
+#leave-comment .btn--submit {
+    padding: 12px;
+    margin-top: 10px;
+}
 /* ==========================================================================
    Helper classes
    ========================================================================== */
@@ -508,7 +573,6 @@ section:not(:first-of-type) {
         width: 100%;
         display: block;
     }
-
 }
 
 /* Tablet ~~~~ */
@@ -529,7 +593,7 @@ section:not(:first-of-type) {
     }
 }
 
-@media only screen and (max-width: 60em) {
+@media only screen and (max-width: 64em) {
     .news-post header {
         margin-top: 20px;
     }
@@ -542,6 +606,10 @@ section:not(:first-of-type) {
     .news-metadata {
         flex-basis: 100%;
         margin-left: -8px;
+    }
+
+    .news .side-content {
+        max-width: 100%;
     }
 }
 
