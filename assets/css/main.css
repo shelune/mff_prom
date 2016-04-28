@@ -323,7 +323,7 @@ section:not(:first-of-type) {
     margin-right: auto;
 }
 
-.news, .performers {
+.news, .performers, .about, .media {
     margin-top: 50px;
 }
 
@@ -478,6 +478,38 @@ article.post {
 .performer p {
     margin-top: 10px;
 }
+
+/* ABOUT PAGE __ ABTPG*/
+
+.about {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+.about {
+    flex: 1;
+}
+
+.show__title {
+    font-size: 72px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #ddd;
+}
+
+.show__subtitle {
+    font-size: 48px;
+}
+
+.show__subtitle + p {
+    font-size: 24px;
+}
+
+.show__title + p {
+    font-size: 36px;
+    margin-top: 20px;
+}
+
 /* ==========================================================================
    Helper classes
    ========================================================================== */
@@ -614,6 +646,18 @@ article.post {
 
     .gallery figure h3 {
         font-size: 14px;
+    }
+
+    .show__title {
+        font-size: 64px;
+    }
+
+    .show__subtitle {
+        font-size: 36px;
+    }
+
+    .show__title + p, .show__subtitle + p {
+        font-size: 20px;
     }
 }
 
