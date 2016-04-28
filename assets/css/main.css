@@ -323,11 +323,11 @@ section:not(:first-of-type) {
     margin-right: auto;
 }
 
-.news {
+.news, .performers {
     margin-top: 50px;
 }
 
-.news .featured {
+.featured {
     background: url("../img/jumbotron.jpg") center no-repeat;
     background-size: cover;
     display: table;
@@ -436,22 +436,46 @@ article.post {
     margin-top: 40px;
 }
 
-#leave-comment > h3 {
+.leave-comment > h3 {
     margin-top: 80px;
     padding-bottom: 20px;
     border-bottom: 1px solid #ddd;
 }
 
-#leave-comment label {
+.leave-comment label {
     display: block;
 }
 
-#leave-comment input, #leave-comment textarea {
+.leave-comment input, .leave-comment textarea {
     width: 100%;
 }
 
-#leave-comment .btn--submit {
+.leave-comment .btn--submit {
     padding: 12px;
+    margin-top: 10px;
+}
+
+
+
+/* PERFORMERS PAGE __ PFMPG*/
+
+.performers-overview h1, .performers-details h1 {
+    margin-bottom: 40px;
+}
+
+.performer {
+    margin-bottom: 40px;
+}
+
+.performer figure {
+    margin-bottom: 10px;
+}
+
+.performer h4 {
+    margin: 5px 0;
+}
+
+.performer p {
     margin-top: 10px;
 }
 /* ==========================================================================
