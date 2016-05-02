@@ -1,0 +1,790 @@
+/*! HTML5 Boilerplate v5.2.0 | MIT License | https://html5boilerplate.com/ */
+
+/*
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+
+@font-face {
+    font-family: 'Proxima Reg';
+    src: url('../fonts/ProximaNovaReg.woff');
+}
+
+@font-face {
+    font-family: 'Proxima Light';
+    src: url('../fonts/ProximaNovaLight.woff');
+}
+
+@font-face {
+    font-family: 'Proxima Bold';
+    src: url('../fonts/ProximaNovaBold.woff');
+}
+html {
+    color: #222;
+    font-size: 1em;
+    line-height: 1.4;
+    text-rendering: optimizeLegibility;
+    font-smoothing: antialiased;
+    -webkit-font-smoothing: antialiased;
+    -webkit-box-sizing: border-box;
+  	-moz-box-sizing: border-box;
+ 	box-sizing: border-box;
+}
+
+/*
+ * Remove text-shadow in selection highlight:
+ * https://twitter.com/miketaylr/status/12228805301
+ *
+ * These selection rule sets have to be separate.
+ * Customize the background color to match your design.
+ */
+
+::-moz-selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+::selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+*, *:before, *:after {
+  -webkit-box-sizing: inherit;
+  -moz-box-sizing: inherit;
+  box-sizing: inherit;
+ }
+
+/*
+ * A better looking default horizontal rule
+ */
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+/*
+ * Remove the gap between audio, canvas, iframes,
+ * images, videos and the bottom of their containers:
+ * https://github.com/h5bp/html5-boilerplate/issues/440
+ */
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+    vertical-align: middle;
+}
+
+/*
+ * Remove default fieldset styles.
+ */
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+
+textarea {
+    resize: vertical;
+}
+
+/* ==========================================================================
+   Browser Upgrade Prompt
+   ========================================================================== */
+
+.browserupgrade {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+body {
+	/* -webkit-transition: all cubic-bezier(0.2, 0.3, 0.25, 0.9) 0.3s;
+    transition: all cubic-bezier(0.2, 0.3, 0.25, 0.9) 0.3s; */
+    /* for global transition but turned off for now */
+    font-family: 'Proxima Reg', sans-serif;
+}
+
+section:not(:first-of-type) {
+    padding-top: 80px;
+}
+
+/* Color choice __ CLR */
+
+/*
+// #4B3D3D - dark gray
+// #FAF8F8 - light
+// #CE5253 - main
+// #46AE45 - accent
+// #3F963D - accent hover
+
+*/
+
+/* INDEX PAGE __ IDXPG */
+
+/* Jumbotron Section __ JMBSCT*/
+
+.fullscreen {
+    background: url("../img/jumbotron-opt-grayscale.jpg") 50% 0 repeat fixed;
+    background-size: cover;
+    min-height: 100vh;
+}
+
+.jumbotron {
+    padding: 4em 0;
+}
+
+.jumbotron__logo {
+    width: 400px;
+    min-width: 160px;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-left {
+    text-align: left;
+}
+
+.vs-dark.vs-dark {
+    color: #FAF8F8;
+}
+
+.vs-light.vs-light {
+    color: #4B3D3D;
+}
+
+.bg-btn {
+    background: #46AE45;
+    border-color: #faf8f8;
+}
+
+.bg-dark {
+    background: #4b3d3d;
+}
+
+.list-reset {
+    list-style: none;
+    padding-left: 0;
+}
+
+.link-reset:hover {
+    text-decoration: none;
+    color: inherit;
+}
+
+.site-anchors {
+    font-size: 24px;
+    width: 100%;
+}
+
+.hero ul a {
+    font-size: inherit;
+}
+
+.jumbotron .header.jumbotron__header-text {
+    font-size: 108px;
+    text-transform: uppercase;
+    font-family: 'Proxima Bold', sans-serif;
+}
+
+.jumbotron__header p {
+    display: inline-block;
+    padding: 0.5em;
+}
+
+.jumbotron__header {
+    transform: translateY(-50%);
+}
+
+.flex {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.flex--column {
+    display: flex;
+    flex-flow: column;
+}
+
+.flex--center-column {
+    align-items: center;
+    justify-content: space-between;
+}
+
+.flex--center {
+    justify-content: center;
+}
+
+.flex--around {
+    justify-content: space-around;
+}
+
+.anchor {
+    padding: 0.5em 1.5em;
+    transition: all 0.25s ease;
+}
+
+.anchor:hover {
+    background: #3F963D;
+}
+
+.hero .subtitle {
+    padding: 0.5em;
+}
+
+
+/* Introduction Section __ INTSCT */
+
+
+.section-intro {
+    margin: 40px 0;
+}
+
+.subsection__text {
+    font-size: 16px;
+}
+
+.section-content {
+    margin-top: 20px;
+}
+
+.intro__gif {
+    display: inline-block;
+}
+
+
+/* Performer Section __ PRFSCT */
+
+.performer .row:nth-of-type(2) {
+    margin-top: 40px;
+}
+
+.gallery > figure {
+    margin: 4px;
+
+}
+
+/* Footer Section __ FTSCT */
+
+.main-footer {
+    background: #101010;
+    padding: 20px;
+}
+
+.footer__nav ul {
+    margin-top: 10px;
+}
+
+.footer__nav li {
+    margin: 0 12px;
+    font-size: 16px;
+}
+
+/* NEWS PAGE __ NWSPG*/
+
+.flex-item--pull-right {
+    margin-left: auto;
+}
+
+.flex-item--pull-up {
+    margin-bottom: auto;
+}
+
+.flex-item--pull-down {
+    margin-top: auto;
+}
+
+.flex-item--pull-left {
+    margin-right: auto;
+}
+
+.news, .performers, .about, .media {
+    margin-top: 50px;
+}
+
+.featured {
+    background: url("../img/jumbotron.jpg") center no-repeat;
+    background-size: cover;
+    display: table;
+    width: 100%;
+}
+
+.featured h1 {
+    font-family: 'Proxima Bold', sans-serif;
+    font-size: 48px;
+    display: flex;
+    line-height: 120px;
+    justify-content: center;
+}
+
+.news-post {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.4);
+    overflow: hidden;
+    padding: 40px 0;
+}
+
+.news .main-content, .news .side-content {
+    margin-top: 80px;
+    margin-bottom: 80px;
+}
+
+.news-title {
+    margin: 0;
+    font-size: 24px;
+}
+
+.news-metadata {
+    margin-bottom: 5px;
+}
+
+.news-metadata i {
+    margin: 0 8px;
+}
+
+.news-post header {
+    margin-bottom: 20px;
+}
+
+.btn--default {
+    border-radius: 0;
+    background: transparent;
+    color: #000;
+    border-color: #000;
+    transition: 0.25s ease all;
+}
+
+.btn--default:hover {
+    background: #000;
+    color: #fff;
+    border-color: darkgray;
+}
+
+.widget {
+    padding: 10px 10px;
+    border: solid 1px #ddd;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.widget-title {
+    padding-bottom: 10px;
+    border-bottom: solid 1px #ddd;
+}
+
+.input--email {
+    margin: 8px 0;
+}
+
+.btn--full {
+    width: 100%;
+}
+
+/* NEWS POST PAGE __ PSTPG*/
+
+.post .news-metadata {
+    margin-top: 20px;
+}
+
+article.post {
+    margin-top: 80px;
+    margin-bottom: 80px;
+}
+
+.post-info {
+    align-items: center;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+.comments-content {
+    padding: 10px 20px;
+    background: rgba(0, 0, 0, 0.05);
+}
+
+.comments-count {
+    text-align: center;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #ddd;
+}
+
+.comments-list {
+    margin-top: 40px;
+}
+
+.leave-comment > h3 {
+    margin-top: 80px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #ddd;
+}
+
+.leave-comment label {
+    display: block;
+}
+
+.leave-comment input, .leave-comment textarea {
+    width: 100%;
+}
+
+.leave-comment .btn--submit {
+    padding: 12px;
+    margin-top: 10px;
+}
+
+
+
+/* PERFORMERS PAGE __ PFMPG*/
+
+.performers-overview h1, .performers-details h1 {
+    margin-bottom: 40px;
+}
+
+.performer {
+    margin-bottom: 40px;
+}
+
+.performer figure {
+    margin-bottom: 10px;
+}
+
+.performer h4 {
+    margin: 5px 0;
+}
+
+.performer p {
+    margin-top: 10px;
+}
+
+/* ABOUT PAGE __ ABTPG*/
+
+.about {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+.about {
+    flex: 1;
+}
+
+.show__title {
+    font-size: 72px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #ddd;
+}
+
+.show__subtitle {
+    font-size: 48px;
+}
+
+.show__subtitle + p {
+    font-size: 24px;
+}
+
+.show__title + p {
+    font-size: 36px;
+    margin-top: 20px;
+}
+
+/* MEDIA PAGE __ MDAPG*/
+
+.gallery > figure {
+    flex: 1 0 25%;
+    min-width: 200px;
+}
+
+.gallery > figure:nth-last-child(2):nth-child(4n) {
+    min-width: 33%;
+}
+
+.media-tags {
+    margin-top: 20px;
+}
+
+.media-tags a {
+    padding: 0.5em 1em;
+    background: #ddd;
+    margin: 0 4px;
+}
+
+.gallery {
+    margin: 40px -0.5em;
+}
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+/*
+ * Hide visually and from screen readers:
+ */
+
+.hidden {
+    display: none !important;
+}
+
+/*
+ * Hide only visually, but have it available for screen readers:
+ * http://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+ */
+
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+/*
+ * Extends the .visuallyhidden class to allow the element
+ * to be focusable when navigated to via the keyboard:
+ * https://www.drupal.org/node/897638
+ */
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+}
+
+/*
+ * Hide visually and from screen readers, but maintain layout
+ */
+
+.invisible {
+    visibility: hidden;
+}
+
+/*
+ * Clearfix: contain floats
+ *
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    `contenteditable` attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that receive the `clearfix` class.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+
+.clearfix:before,
+.clearfix:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+/* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   These examples override the primary ('mobile first') styles.
+   Modify as content requires.
+   ========================================================================== */
+
+/* Iphone 4 ~~~~ */
+@media only screen and (max-width: 20em) {
+    
+}
+
+/* Iphone 5 ~~~~ */
+
+@media only screen and (max-width: 24em) {
+    .hero {
+        font-size: 16px;
+        overflow: hidden;
+    }
+
+    .jumbotron .header.jumbotron__header-text {
+        margin-top: auto;
+        font-size: 40px;
+    }
+
+    .hero .subtitle {
+        font-size: 16px;
+        max-width: 80vw;
+        padding: 0.25em;
+    }
+
+    .site-anchors {
+        font-size: 16px;
+        margin: 0 auto;
+        margin-top: 40px;
+    }
+
+    .site-anchors li {
+        flex-basis: 40%;
+        margin: 10px 10px 0;
+    }
+
+    .site-anchors a {
+        width: 100%;
+        display: block;
+    }
+}
+
+/* Tablet ~~~~ */
+
+@media only screen and (max-width: 50em) {
+    .gallery figure {
+        flex-basis: 25%;
+    }
+
+    .gallery figure img {
+        width: 100%;
+        height: auto;
+        object-fit: fill;
+    }
+
+    .gallery figure h3 {
+        font-size: 14px;
+    }
+
+    .show__title {
+        font-size: 64px;
+    }
+
+    .show__subtitle {
+        font-size: 36px;
+    }
+
+    .show__title + p, .show__subtitle + p {
+        font-size: 20px;
+    }
+}
+
+@media only screen and (max-width: 64em) {
+    .news-post header {
+        margin-top: 20px;
+    }
+
+    .news-title {
+        margin-bottom: 10px;
+        flex-basis: 100%;
+    }
+
+    .news-metadata {
+        flex-basis: 100%;
+        margin-left: -8px;
+    }
+
+    .news .side-content {
+        max-width: 100%;
+    }
+}
+
+@media print,
+       (-webkit-min-device-pixel-ratio: 1.25),
+       (min-resolution: 1.25dppx),
+       (min-resolution: 120dpi) {
+    /* Style adjustments for high resolution devices */
+}
+
+/* ==========================================================================
+   Print styles.
+   Inlined to avoid the additional HTTP request:
+   http://www.phpied.com/delay-loading-your-print-css/
+   ========================================================================== */
+
+@media print {
+    *,
+    *:before,
+    *:after {
+        background: transparent !important;
+        color: #000 !important; /* Black prints faster:
+                                   http://www.sanbeiji.com/archives/953 */
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+
+    a,
+    a:visited {
+        text-decoration: none;
+    }
+
+    a[href]:after {
+        content: " (" attr(href) ")";
+    }
+
+    abbr[title]:after {
+        content: " (" attr(title) ")";
+    }
+
+    /*
+     * Don't show links that are fragment identifiers,
+     * or use the `javascript:` pseudo protocol
+     */
+
+    a[href^="#"]:after,
+    a[href^="javascript:"]:after {
+        content: "";
+    }
+
+    pre,
+    blockquote {
+        border: 1px solid #999;
+        page-break-inside: avoid;
+    }
+
+    /*
+     * Printing Tables:
+     * http://css-discuss.incutio.com/wiki/Printing_Tables
+     */
+
+    thead {
+        display: table-header-group;
+    }
+
+    tr,
+    img {
+        page-break-inside: avoid;
+    }
+
+    img {
+        max-width: 100% !important;
+    }
+
+    p,
+    h2,
+    h3 {
+        orphans: 3;
+        widows: 3;
+    }
+
+    h2,
+    h3 {
+        page-break-after: avoid;
+    }
+}
