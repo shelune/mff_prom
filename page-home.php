@@ -22,6 +22,7 @@ $oldperformer_image = get_field('oldperformer_image');
 $newperformer_title = get_field('newperformer_title');
 $newperformer_content = get_field('newperformer_content');
 
+$ticket_section_title = get_field('ticket_section_title');
 get_header(); ?>
 
 	<section class="hero" data-type="background" data-speed="5">
@@ -47,7 +48,7 @@ get_header(); ?>
 		<div class="container">
 			<div class="row text-center">
 				<!-- If introduction image is here -->
-				<?php 
+				<?php
 					if (!empty($introduction_image)) : ?>
 				<img src="<?php echo $introduction_image['url']; ?>" alt="<?php echo $introduction_image['alt']; ?>">
 				<?php endif ?>
@@ -74,7 +75,7 @@ get_header(); ?>
 						<p class="subsection__text"><?php echo $oldperformer_content ?></p>
 					</div>
 					<div class="col-sm-7 subsection">
-						<?php 
+						<?php
 							if (!empty($oldperformer_image)) : ?>
 							<img class="img-responsive" src="<?php echo $oldperformer_image['url']; ?>" alt="<?php echo $oldperformer_image['alt']; ?>">
 						<?php endif ?>
@@ -98,35 +99,30 @@ get_header(); ?>
 	<section class="home__more">
 		<div class="container">
 			<div class="row text-center">
-				<h2 class="section-intro">Tickets</h2>
-				<div class="col-sm-10 col-sm-offset-1 ticket">
-					<div class="col-sm-4 ticket-preview">
-						<img src="http://placehold.it/800x500" alt="ticket" class="img-responsive">
-					</div>
-					<div class="col-sm-8 flex--column text-left ticket-info">
-						<h3>Pre-purchase Ticket</h3>
-						<h4>Available: DD/MM/YY</h4>
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis fugit impedit dicta?</p>
-						<a href="<?php echo $book_url ?>" target="_blank" class="link-reset ticket-book">Book</a>
-						<div class="ticket-price vs-dark">
-							<h3><?php echo $prepurchase_price ?></h3>
+				<h2 class="section-intro"><?php echo $ticket_section_title ?></h2>
+
+				<?php
+					$loop = new WP_Query(array('post_type' => 'ticket', 'orderby' => 'post_id', 'order' => 'ASC'));
+				?>
+
+				<?php
+					while ($loop->have_posts()) : $loop->the_post() ?>
+					<div class="col-sm-10 col-sm-offset-1 ticket">
+						<div class="col-sm-4 ticket-preview">
+							<img src="<?php the_field('ticket_preview_image'); ?>" alt="ticket preview" class="img-responsive">
+						</div>
+						<div class="col-sm-8 flex--column text-left ticket-info">
+							<h3><?php the_title(); ?></h3>
+							<h4>Available From: <?php the_field('ticket_available'); ?></h4>
+							<p><?php the_field('ticket_desc'); ?></p>
+							<a href="<?php the_field('ticket_link'); ?>" target="_blank" class="link-reset ticket-book">Book</a>
+							<div class="ticket-price vs-dark">
+								<h3><?php the_field('ticket_price'); ?></h3>
+							</div>
 						</div>
 					</div>
-				</div>
-				<div class="col-sm-10 col-sm-offset-1 ticket">
-					<div class="col-sm-4 ticket-preview">
-						<img src="http://placehold.it/800x500" alt="ticket" class="img-responsive">
-					</div>
-					<div class="col-sm-8 flex--column text-left ticket-info">
-						<h3>Pre-purchase Ticket</h3>
-						<h4>Available: DD/MM/YY</h4>
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis fugit impedit dicta?</p>
-						<a href="<?php echo $book_url ?>" target="_blank" class="link-reset ticket-book">Book</a>
-						<div class="ticket-price vs-dark">
-							<h3><?php echo $atDoor_price ?></h3>
-						</div>
-					</div>
-				</div>
+
+				<?php endwhile; ?>
 			</div>
 		</div>
 	</section>

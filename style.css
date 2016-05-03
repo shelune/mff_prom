@@ -474,7 +474,7 @@ section:not(:first-of-type) {
     padding-top: 80px;
 }
 
-.logged-in .navbar-fixed-top {
+.admin-bar .navbar-fixed-top {
 	top: 32px;
 
 }
@@ -635,7 +635,7 @@ section:not(:first-of-type) {
 }
 
 .featured {
-    background: url("/wp-content/themes/octbeatz/assets/img/jumbotron.jpg") center no-repeat;
+    background: url("/wordpress/wp-content/themes/octbeatz/assets/img/jumbotron.jpg") center no-repeat;
     background-size: cover;
     display: table;
     width: 100%;
