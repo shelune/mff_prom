@@ -3,6 +3,10 @@
     Template Name: Performer Page
  */
 
+$performer_overview_title = get_field('performer_overview_title');
+$performer_overview_desc = get_field('performer_overview_desc');
+$performer_overview_image = get_field('performer_overview_image');
+
 get_header(); ?>
 
 	<section class="featured" data-type="background" data-speed="3">
@@ -12,13 +16,16 @@ get_header(); ?>
 	<section class="performers-overview">
 		<div class="container">
 			<div class="row">
-				<h1 class="text-center">Overview</h1>
+				<h1 class="text-center"><?php echo $performer_overview_title; ?></h1>
 				<div class="col-sm-4 overview-content">
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad at, nesciunt quasi et vel nam sapiente, in. Officiis provident minus suscipit iure rerum nihil accusamus, dicta tempora nostrum ratione enim quo in quaerat odio. Eum molestias maiores placeat esse, sit nobis rerum. Magni fugiat assumenda nemo nobis. Consequatur molestias ipsam, iure sequi, rerum porro, iste excepturi earum doloribus architecto, eius!</p>
+					<p><?php echo $performer_overview_desc ?></p>
 				</div>
 				<div class="col-sm-8 overview-image">
 					<figure>
-						<img class="img-responsive" src="http://placehold.it/800x400" alt="">
+						<?php
+							if (!empty($performer_overview_image)) : ?>
+								<img class="img-responsive" src="<?php echo $performer_overview_image['url']; ?>" alt="<?php echo $performer_overview_image['alt']; ?>">
+						<?php endif ?>
 					</figure>
 				</div>
 			</div>

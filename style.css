@@ -468,27 +468,20 @@ body {
     transition: all cubic-bezier(0.2, 0.3, 0.25, 0.9) 0.3s; */
     /* for global transition but turned off for now */
     font-family: 'Proxima Reg', sans-serif;
+	margin-top: 50px;
 }
 
 section:not(:first-of-type) {
     padding-top: 80px;
 }
 
+/* no longer needed cuz we just hide it totally
 .admin-bar .navbar-fixed-top {
 	top: 32px;
-
-}
+} 
+*/
 
 /* Color choice __ CLR */
-
-/*
-// #4B3D3D - dark gray
-// #FAF8F8 - light
-// #CE5253 - main
-// #46AE45 - accent
-// #3F963D - accent hover
-
-*/
 
 /* INDEX PAGE __ IDXPG */
 
@@ -629,10 +622,6 @@ section:not(:first-of-type) {
 }
 
 /* NEWS PAGE __ NWSPG*/
-
-.news, .performers, .about, .media {
-    margin-top: 50px;
-}
 
 .featured {
     background: url("/wordpress/wp-content/themes/octbeatz/assets/img/jumbotron.jpg") center no-repeat;
