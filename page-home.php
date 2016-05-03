@@ -15,6 +15,13 @@ $intro1_content = get_field('intro1_content');
 $intro2_title = get_field('intro2_title');
 $intro2_content = get_field('intro2_content');
 
+$performer_title = get_field('performer_title');
+$oldperformer_title = get_field('oldperformer_title');
+$oldperformer_content = get_field('oldperformer_content');
+$oldperformer_image = get_field('oldperformer_image');
+$newperformer_title = get_field('newperformer_title');
+$newperformer_content = get_field('newperformer_content');
+
 get_header(); ?>
 
 	<section class="hero" data-type="background" data-speed="5">
@@ -60,20 +67,23 @@ get_header(); ?>
 	<section class="home__performer">
 		<div class="container">
 			<div class="row">
-				<h2 class="section-intro text-center">And to our performers</h2>
+				<h2 class="section-intro text-center"><?php echo $performer_title ?></h2>
 				<div class="col-sm-12">
 					<div class="col-sm-4 col-sm-offset-1 subsection">
-						<h3 class="subsection__title zero-margin--top">Remember this guy?</h3>
-						<p class="subsection__text">He was rocking the show for the last 5 consecutive songs in 2015. This year he's gonna take a step back and take different position so newcomers can join the fun too.</p>
+						<h3 class="subsection__title zero-margin--top"><?php echo $oldperformer_title ?></h3>
+						<p class="subsection__text"><?php echo $oldperformer_content ?></p>
 					</div>
 					<div class="col-sm-7 subsection">
-						<img src="http://placehold.it/1220x400" class="img-responsive" alt="">
+						<?php 
+							if (!empty($oldperformer_image)) : ?>
+							<img class="img-responsive" src="<?php echo $oldperformer_image['url']; ?>" alt="<?php echo $oldperformer_image['alt']; ?>">
+						<?php endif ?>
 					</div>
 				</div>
 				<div class="col-sm-12">
 					<div class="col-sm-4 subsection col-sm-push-8">
-						<h3 class="subsection__title zero-margin--top">The new faces</h3>
-						<p class="subsection__text">They may be new or they may be not, but here in October #Beatz, they are just about to get their first step onto the stage!</p>
+						<h3 class="subsection__title zero-margin--top"><?php echo $newperformer_title ?></h3>
+						<p class="subsection__text"><?php echo $newperformer_content ?></p>
 					</div>
 					<div class="col-sm-7 col-sm-offset-1 subsection col-sm-pull-4">
 						<div class="gallery flex">
