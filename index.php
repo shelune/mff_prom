@@ -13,17 +13,21 @@
  */
 
 get_header(); ?>
-
-	<div id="primary" class="content-area">
-		<main id="main" class="site-main" role="main">
-
-		<?php
-		if ( have_posts() ) :
+	
+<section class="featured" data-type="background" data-speed="3">
+	<h1 class="vs-dark text-center">News</h1>
+</section>
+	
+<div class="container">
+	<div class="row" id="primary">
+		<main class="main-content col-sm-8" role="main">
+			<?php
+			if ( have_posts() ) :
 
 			if ( is_home() && ! is_front_page() ) : ?>
-				<header>
-					<h1 class="page-title screen-reader-text"><?php single_post_title(); ?></h1>
-				</header>
+			<header>
+				<h1 class="page-title screen-reader-text"><?php single_post_title(); ?></h1>
+			</header>
 
 			<?php
 			endif;
@@ -31,26 +35,29 @@ get_header(); ?>
 			/* Start the Loop */
 			while ( have_posts() ) : the_post();
 
-				/*
+			/*
 				 * Include the Post-Format-specific template for the content.
 				 * If you want to override this in a child theme, then include a file
 				 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
 				 */
-				get_template_part( 'template-parts/content', get_post_format() );
+			get_template_part( 'template-parts/content', get_post_format() );
 
 			endwhile;
 
 			the_posts_navigation();
 
-		else :
+			else :
 
 			get_template_part( 'template-parts/content', 'none' );
 
-		endif; ?>
-
-		</main><!-- #main -->
-	</div><!-- #primary -->
+			endif; ?>
+		</main>
+		
+		<aside class="side-content col-sm-3 col-sm-offset-1">
+			<?php get_sidebar() ?>
+		</aside>
+	</div>
+</div>
 
 <?php
-get_sidebar();
-get_footer();
+get_footer(); ?>

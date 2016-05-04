@@ -471,7 +471,7 @@ body {
 	margin-top: 50px;
 }
 
-section:not(:first-of-type) {
+.site > section:not(:first-of-type) {
     padding-top: 80px;
 	margin-bottom: 40px;
 }
@@ -645,7 +645,7 @@ section:not(:first-of-type) {
     padding: 40px 0;
 }
 
-.news .main-content, .news .side-content {
+.side-content {
     margin-top: 80px;
     margin-bottom: 80px;
 }
