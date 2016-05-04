@@ -152,3 +152,9 @@ require get_template_directory() . '/inc/customizer.php';
 require get_template_directory() . '/inc/jetpack.php';
 
 add_filter('show_admin_bar', '__return_false');
+
+function new_excerpt_more($more) {
+	global $post;
+	return '... <a class="moretag" href="'. get_permalink($post->ID) -'"> continue reading </a>';
+}
+add_filter('excerpt_more', 'new_excerpt_more');

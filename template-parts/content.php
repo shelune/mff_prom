@@ -13,33 +13,32 @@
 	<header class="entry-header">
 		<?php
 			if ( is_single() ) {
-				the_title( '<h1 class="entry-title">', '</h1>' );
+				the_title( '<h3 class="entry-title">', '</h3>' );
 			} else {
-				the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
+				the_title( '<h3 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h3>' );
 			}
 
 		if ( 'post' === get_post_type() ) : ?>
-		<div class="entry-meta">
-			<?php octbeatz_posted_on(); ?>
-		</div><!-- .entry-meta -->
+			<div class="news-metadata flex flex-item--pull-right">
+				<i class="fa fa-user"></i><?php the_author(); ?>
+				<i class="fa fa-calendar"></i><time><?php the_date(); ?></time>
+				<i class="fa fa-tags"></i><?php the_tags(); ?>
+			</div>
+		<?php edit_post_link('Edit', '<div><i class="fa fa-pencil></i>"', '</div>'); ?>
 		<?php
 		endif; ?>
 	</header><!-- .entry-header -->
 
-	<div class="entry-content">
-		<?php
-			the_content( sprintf(
-				/* translators: %s: Name of current post. */
-				wp_kses( __( 'Continue reading %s <span class="meta-nav">&rarr;</span>', 'octbeatz' ), array( 'span' => array( 'class' => array() ) ) ),
-				the_title( '<span class="screen-reader-text">"', '"</span>', false )
-			) );
-
-			wp_link_pages( array(
-				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'octbeatz' ),
-				'after'  => '</div>',
-			) );
-		?>
-	</div><!-- .entry-content -->
+	<div class="news-image">
+		<?php if (has_post_thumbnail()) : ?>
+			<img class="<?php the_post_thumbnail(); ?>" alt="">
+		<?php endif; ?>
+	</div>
+	
+	<div class="news-excerpt">
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque eveniet, veniam voluptas, voluptatibus esse ducimus illum molestias provident beatae repellendus ea optio aut at assumenda. Accusamus quasi sed suscipit, eaque.</p>
+		<button type="button" class="btn btn-primary pull-right">READ MORE</button>
+	</div>
 
 	<footer class="entry-footer">
 		<?php octbeatz_entry_footer(); ?>
