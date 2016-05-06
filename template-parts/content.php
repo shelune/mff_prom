@@ -31,13 +31,13 @@
 		endif; ?>
 	</header><!-- .entry-header -->
 
-	<div class="news-image">
+	<div class="news-image col-sm-5">
 		<?php if (has_post_thumbnail()) : ?>
 			<?php the_post_thumbnail(); ?>
 		<?php endif; ?>
 	</div>
 	
-	<div class="news-excerpt">
+	<div class="news-excerpt col-sm-7">
 		<?php the_excerpt(); ?>
 	</div>
 
