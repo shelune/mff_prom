@@ -173,13 +173,29 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 # Widgets
 --------------------------------------------------------------*/
 .widget {
-	margin: 0 0 1.5em;
+	padding: 10px 10px;
+	border: solid 1px #ddd;
+	border-radius: 5px;
+	margin-bottom: 20px;
 }
 
 /* Make sure select elements fit in widgets. */
 .widget select {
 	max-width: 100%;
 }
+
+.widget-title {
+	padding-bottom: 10px;
+	border-bottom: solid 1px #ddd;
+	margin-top: 10px;
+}
+
+.widget ul {
+	list-style: none;
+	padding-left: 0;
+	margin: 0;
+}
+
 
 /*--------------------------------------------------------------
 # Content
@@ -677,6 +693,29 @@ body {
 	margin-right: 8px;
 }
 
+.search-form {
+	display: flex;
+	flex-flow: row wrap;
+}
+
+.search-form label {
+	flex-basis: 100%;
+}
+
+.search-form input[type="search"] {
+	width: 100%;
+}
+
+.search-form .search-submit {
+	flex-basis: 100%;
+}
+
+.search-form input {
+	padding: 8px;
+	outline: none;
+	border: 1px solid #ddd;
+}
+
 .btn--default {
     border-radius: 0;
     background: transparent;
@@ -689,18 +728,6 @@ body {
     background: #000;
     color: #fff;
     border-color: darkgray;
-}
-
-.widget {
-    padding: 10px 10px;
-    border: solid 1px #ddd;
-    border-radius: 5px;
-    margin-bottom: 20px;
-}
-
-.widget-title {
-    padding-bottom: 10px;
-    border-bottom: solid 1px #ddd;
 }
 
 .input--email {
