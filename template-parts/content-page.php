@@ -10,32 +10,25 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<header class="entry-header">
-		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
-	</header><!-- .entry-header -->
+	<header class="post-header">
+		<img src="http://placehold.it/1920x1080" alt="" class="post-banner img-responsive">
+		<div class="post-info flex">
+			<h1 class="post-title">Blog Title</h1>
+			<div class="news-metadata flex flex-item--pull-right">
+				<span><i class="fa fa-user"></i>MFF</span>
+				<span><i class="fa fa-calendar"></i><time>April 25th, 2016</time></span>
+				<span><i class="fa fa-tags"></i><a href="#">Tag 1</a>, <a href="#">Tag 2</a></span>
+			</div>
+		</div>
+	</header>
 
-	<div class="entry-content">
-		<?php
-			the_content();
-
-			wp_link_pages( array(
-				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'octbeatz' ),
-				'after'  => '</div>',
-			) );
-		?>
-	</div><!-- .entry-content -->
-
-	<footer class="entry-footer">
-		<?php
-			edit_post_link(
-				sprintf(
-					/* translators: %s: Name of current post */
-					esc_html__( 'Edit %s', 'octbeatz' ),
-					the_title( '<span class="screen-reader-text">"', '"</span>', false )
-				),
-				'<span class="edit-link">',
-				'</span>'
-			);
-		?>
-	</footer><!-- .entry-footer -->
+	<div class="">
+		<?php if (has_post_thumbnail()) : ?>
+		<?php the_post_thumbnail(); ?>
+		<?php endif; ?>
+	</div>
+	
+	<div class="post-content">
+		<?php the_content(); ?>
+	</div>
 </article><!-- #post-## -->
