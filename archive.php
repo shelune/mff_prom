@@ -8,19 +8,21 @@
  */
 
 get_header(); ?>
-
-	<div id="primary" class="content-area">
-		<main id="main" class="site-main" role="main">
-
+	
+<section class="featured" data-type="background" data-speed="3">
+	<?php
+	the_archive_title( '<h1 class="page-title vs-dark text-center">', '</h1>' );
+	the_archive_description( '<div class="taxonomy-description">', '</div>' );
+	?>
+</section>
+		
+<div class="container">
+	<div class="row" id="primary">
+		<main class="col-sm-8" id="content">
 		<?php
 		if ( have_posts() ) : ?>
 
-			<header class="page-header">
-				<?php
-					the_archive_title( '<h1 class="page-title">', '</h1>' );
-					the_archive_description( '<div class="taxonomy-description">', '</div>' );
-				?>
-			</header><!-- .page-header -->
+			
 
 			<?php
 			/* Start the Loop */
@@ -42,10 +44,13 @@ get_header(); ?>
 			get_template_part( 'template-parts/content', 'none' );
 
 		endif; ?>
+		
 
 		</main><!-- #main -->
+		<aside class="side-content col-md-3 col-md-offset-1 col-sm-4">
+			<?php get_sidebar(); ?>
+		</aside>
 	</div><!-- #primary -->
+</div>
 
-<?php
-get_sidebar();
-get_footer();
+<?php get_footer(); ?>

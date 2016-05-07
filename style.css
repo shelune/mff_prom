@@ -247,8 +247,58 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 	word-wrap: break-word;
 }
 
+.comment-content {
+	margin: 10px 0;
+	padding: 8px;
+	background: #ddd;
+}
+
+.comment-content p {
+	margin: 0;
+}
+
+.comment-list {
+	list-style: none;
+	margin-top: 40px;
+}
+
+.comment-meta {
+	color: inherit;
+}
+
+.comment-meta a {
+	color: inherit;
+}
+
+.comment-metadata {
+	margin-top: 10px;
+}
+
 .bypostauthor {
 	display: block;
+}
+
+.comment-respond {
+	margin-top: 80px;
+}
+
+.comment-reply-title, .comments-title {
+	font-family: 'Proxima Bold', sans-serif;
+}
+
+.comment-reply-title {
+	text-align: center;
+	padding-bottom: 20px;
+	border-bottom: 1px solid #ddd;
+}
+
+.logged-in-as a {
+	color: inherit;
+}
+
+.comment-form-comment {
+	display: flex;
+	flex-flow: column;
 }
 
 /*--------------------------------------------------------------
@@ -761,19 +811,9 @@ article.news-post {
 	height: auto;
 }
 
-.comments-content {
+.comments-area {
     padding: 10px 20px;
     background: rgba(0, 0, 0, 0.05);
-}
-
-.comments-count {
-    text-align: center;
-    padding-bottom: 20px;
-    border-bottom: 1px solid #ddd;
-}
-
-.comments-list {
-    margin-top: 40px;
 }
 
 .leave-comment > h3 {
@@ -1077,9 +1117,7 @@ article.news-post {
 /* Tablet ~~~~ */
 
 @media only screen and (max-width: 37.5em) {
-	.logged-in .navbar-fixed-top {
-		top: 42px;
-	}
+	
 }
 
 @media only screen and (max-width: 50em) {
@@ -1108,10 +1146,6 @@ article.news-post {
     .show__title + p, .show__subtitle + p {
         font-size: 20px;
     }
-
-	.logged-in .navbar-fixed-top {
-		top: 46px;
-	}
 }
 
 @media only screen and (max-width: 64em) {

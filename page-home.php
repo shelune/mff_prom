@@ -34,11 +34,11 @@ get_header(); ?>
 
 			<div class="container">
 				<ul class="site-anchors flex flex--center list-reset">
-					<li><a class="anchor text-center bg-btn vs-dark" href="news.html">News</a></li>
-					<li><a class="anchor text-center bg-btn vs-dark" href="#">Program</a></li>
-					<li><a class="anchor text-center bg-btn vs-dark" href="performers.html">Performers</a></li>
-					<li><a class="anchor text-center bg-btn vs-dark" href="media.html">Media</a></li>
-					<li><a class="anchor text-center bg-btn vs-dark" href="about.html">About</a></li>
+					<li><a class="anchor text-center bg-btn vs-dark" href="news">News</a></li>
+					<li><a class="anchor text-center bg-btn vs-dark" href="programs">Program</a></li>
+					<li><a class="anchor text-center bg-btn vs-dark" href="performers">Performers</a></li>
+					<li><a class="anchor text-center bg-btn vs-dark" href="media">Media</a></li>
+					<li><a class="anchor text-center bg-btn vs-dark" href="about">About</a></li>
 				</ul>
 			</div>
 		</div>

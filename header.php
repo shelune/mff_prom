@@ -40,20 +40,18 @@
 							<span class="icon-bar"></span>
 							<span class="icon-bar"></span>
 						</button>
-						<a href="/" class="navbar-brand">Music For Friends</a>
+						<a href="<?php echo home_url(); ?>" class="navbar-brand">Music For Friends</a>
 					</div>
 					
 					<?php 
 						wp_nav_menu(array (
 							'theme_location' => 'primary',
-							'container' => 'navbar',
+							'container' => 'div',
 							'container_class' => 'navbar-collapse collapse',
 							'menu_class' => 'nav navbar-nav navbar-right'
 						));
 					?>
-					
-				
-					
+		
 				</div>
 			</div>
 		</div>
