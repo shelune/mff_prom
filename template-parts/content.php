@@ -23,7 +23,7 @@
 			if ( is_single() ) {
 				the_title( '<h3 class="entry-title">', '</h3>' );
 			} else {
-				the_title( '<h3 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h3>' );
+				the_title( '<h3 class="entry-title"><a class="vs-light link-reset" href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h3>' );
 			}
 
 			if ( 'post' === get_post_type() ) : ?>

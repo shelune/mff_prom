@@ -8,16 +8,19 @@
  */
 
 get_header(); ?>
+	
+<section class="featured" data-type="background" data-speed="3">
+	<h1 class="page-title text-center vs-dark"><?php printf( esc_html__( 'Search Results for: %s', 'octbeatz' ), '<span>' . get_search_query() . '</span>' ); ?></h1>
+</section>
+	
+<div class="container">
+	<div class="row" id="primary">
+		<main class="col-sm-8" id="content">
 
-	<section id="primary" class="content-area">
-		<main id="main" class="site-main" role="main">
+	
 
 		<?php
 		if ( have_posts() ) : ?>
-
-			<header class="page-header">
-				<h1 class="page-title"><?php printf( esc_html__( 'Search Results for: %s', 'octbeatz' ), '<span>' . get_search_query() . '</span>' ); ?></h1>
-			</header><!-- .page-header -->
 
 			<?php
 			/* Start the Loop */
@@ -41,7 +44,12 @@ get_header(); ?>
 		endif; ?>
 
 		</main><!-- #main -->
-	</section><!-- #primary -->
+		
+		<aside class="side-content col-md-3 col-md-offset-1 col-sm-4">
+			<?php get_sidebar(); ?>
+		</aside>
+	</div><!-- #primary -->
+</div>
 
 <?php
 get_sidebar();

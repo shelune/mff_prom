@@ -188,6 +188,7 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 	padding-bottom: 10px;
 	border-bottom: solid 1px #ddd;
 	margin-top: 10px;
+	font-family: 'Proxima Bold', sans-serif;
 }
 
 .widget ul {

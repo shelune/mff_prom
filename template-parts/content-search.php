@@ -9,22 +9,41 @@
 
 ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<header class="entry-header">
-		<?php the_title( sprintf( '<h2 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' ); ?>
+<article class="news-post" id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+	<div class="col-sm-4">
+		<div class="news-image">
+			<?php if (has_post_thumbnail()) : ?>
+			<?php the_post_thumbnail(); ?>
+			<?php endif; ?>
+		</div>
+	</div>
+	<div class="col-sm-8">
+		<header class="entry-header flex">
+			<?php
+			if ( is_single() ) {
+				the_title( '<h3 class="entry-title">', '</h3>' );
+			} else {
+				the_title( '<h3 class="entry-title"><a class="vs-light link-reset" href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h3>' );
+			}
 
-		<?php if ( 'post' === get_post_type() ) : ?>
-		<div class="entry-meta">
-			<?php octbeatz_posted_on(); ?>
-		</div><!-- .entry-meta -->
-		<?php endif; ?>
-	</header><!-- .entry-header -->
+			if ( 'post' === get_post_type() ) : ?>
+			<div class="news-metadata flex flex-item--pull-right">
+				<span><i class="fa fa-user"></i><?php the_author(); ?></span>
+				<span><i class="fa fa-calendar"></i><time><?php the_date(); ?></time></span>
+				<span><i class="fa fa-tags"></i><?php the_tags(); ?></span>
 
-	<div class="entry-summary">
-		<?php the_excerpt(); ?>
-	</div><!-- .entry-summary -->
+				<?php edit_post_link('Edit', '<div class="flex-item--pull-right"><i class="fa fa-pencil"></i>', '</div>'); ?>
+			</div>
 
-	<footer class="entry-footer">
-		<?php octbeatz_entry_footer(); ?>
-	</footer><!-- .entry-footer -->
+			<?php
+			endif; ?>
+		</header><!-- .entry-header -->
+
+		<div class="news-excerpt">
+			<?php the_excerpt(); ?>
+		</div>
+	</div>
+
+
+
 </article><!-- #post-## -->
