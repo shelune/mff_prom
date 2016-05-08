@@ -361,7 +361,7 @@ object {
 ## Galleries
 --------------------------------------------------------------*/
 .gallery {
-	margin-bottom: 1.5em;
+	margin: 20px 0;
 }
 
 .gallery-item {
