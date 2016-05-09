@@ -911,6 +911,39 @@ article.news-post {
     margin: 0 4px;
 }
 
+/* PROGRAM PAGE __ PRGPG */
+
+.svg-icon {
+	width: 24px;
+}
+
+.program-type {
+	justify-content: center;
+	align-content: center;
+}
+
+.program__image {
+	padding: 20px;
+}
+
+.program {
+	margin-bottom: 40px;
+	padding-bottom: 10px;
+	border-bottom: 5px solid #ddd;
+}
+
+/*
+.program__instruments {
+	position: absolute;
+	top: 20px;
+	right: 0;
+}
+*/
+
+.program__genre {
+ 	padding-bottom: 10px;
+	border-bottom: 1px dashed #bbb;
+}
 
 /* ==========================================================================
    Helper classes _ HLP

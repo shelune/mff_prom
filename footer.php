@@ -18,10 +18,11 @@
                 <div class="col-sm-6 col-sm-offset-1">
                     <nav class="footer__nav">
                         <ul class="flex-column list-reset">
-                            <li><a class="vs-dark" href="">Program</a></li>
-                            <li><a class="vs-dark" href="">Performer</a></li>
-                            <li><a class="vs-dark" href="">Media</a></li>
-                            <li><a class="vs-dark" href="">About</a></li>
+							<li><a class="vs-dark" href="news">News</a></li>
+							<li><a class="vs-dark" href="performers">Performers</a></li>
+                            <li><a class="vs-dark" href="programs">Program</a></li>
+                            <li><a class="vs-dark" href="media">Media</a></li>
+                            <li><a class="vs-dark" href="about">About</a></li>
                         </ul>
                     </nav>
                 </div>
