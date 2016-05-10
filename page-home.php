@@ -50,7 +50,7 @@ get_header(); ?>
 				<!-- If introduction image is here -->
 				<?php
 					if (!empty($introduction_image)) : ?>
-					<img src="<?php echo $introduction_image['url']; ?>" alt="<?php echo $introduction_image['alt']; ?>">
+					<img class="img-responsive" src="<?php echo $introduction_image['url']; ?>" alt="<?php echo $introduction_image['alt']; ?>">
 				<?php endif ?>
 				<h2 class="section-intro text-center"><?php echo $introduction_title ?></h2>
 				<div class="col-sm-5 subsection col-sm-offset-1">

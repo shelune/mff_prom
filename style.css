@@ -692,7 +692,7 @@ body {
 /* NEWS PAGE __ NWSPG*/
 
 .featured {
-    background: url("/wordpress/wp-content/themes/octbeatz/assets/img/jumbotron.jpg") center no-repeat;
+	background: url("../octbeatz/assets/img/jumbotron.jpg") center no-repeat;
     background-size: cover;
     display: table;
     width: 100%;
