@@ -46,20 +46,21 @@ get_header(); ?>
 
 	<section class="home__intro">
 		<div class="container">
-			<div class="row text-center">
+			<div class="row">
 				<!-- If introduction image is here -->
-				<?php
-					if (!empty($introduction_image)) : ?>
-				<img class="intro__gif img-responsive" src="<?php echo $introduction_image['url']; ?>" alt="<?php echo $introduction_image['alt']; ?>">
-				<?php endif ?>
-				<h2 class="section-intro text-center"><?php echo $introduction_title ?></h2>
-				<div class="col-sm-5 subsection col-sm-offset-1">
-					<h3 class="subsection__title zero-margin--top text-left"><?php echo $intro1_title ?></h3>
-					<p class="subsection__text text-left"><?php echo $intro1_content ?></p>
+				<h2 class="section-intro"><?php echo $introduction_title ?></h2>
+				<div class="col-sm-4 intro__image">
+					<img src="http://placehold.it/900x1000" alt="plc" class="img-responsive">
 				</div>
-				<div class="col-sm-5 subsection">
-					<h3 class="subsection__title zero-margin--top text-left"><?php echo $intro2_title ?></h3>
-					<p class="subsection__text text-left"><?php echo $intro2_content ?></p>
+				<div class="col-sm-7 intro__content">
+					<div class="col-sm-12 intro__last-year">
+						<h3 class="subsection__title zero-margin--top text-left"><?php echo $intro1_title ?></h3>
+						<p class="subsection__text text-left"><?php echo $intro1_content ?></p>
+					</div>
+					<div class="col-sm-12 intro__this-year">
+						<h3 class="subsection__title zero-margin--top text-left"><?php echo $intro2_title ?></h3>
+						<p class="subsection__text text-left"><?php echo $intro2_content ?></p>
+					</div>
 				</div>
 			</div>
 		</div>
@@ -68,13 +69,13 @@ get_header(); ?>
 	<section class="home__performer">
 		<div class="container">
 			<div class="row">
-				<h2 class="section-intro text-center"><?php echo $performer_title ?></h2>
+				<h2 class="section-intro text-right"><?php echo $performer_title ?></h2>
 				<div class="col-sm-12">
-					<div class="col-sm-4 col-sm-offset-1 subsection">
+					<div class="col-sm-4 subsection">
 						<h3 class="subsection__title zero-margin--top"><?php echo $oldperformer_title ?></h3>
 						<p class="subsection__text"><?php echo $oldperformer_content ?></p>
 					</div>
-					<div class="col-sm-7 subsection">
+					<div class="col-sm-8 subsection">
 						<?php
 							if (!empty($oldperformer_image)) : ?>
 							<img class="img-responsive" src="<?php echo $oldperformer_image['url']; ?>" alt="<?php echo $oldperformer_image['alt']; ?>">
@@ -86,7 +87,7 @@ get_header(); ?>
 						<h3 class="subsection__title zero-margin--top"><?php echo $newperformer_title ?></h3>
 						<p class="subsection__text"><?php echo $newperformer_content ?></p>
 					</div>
-					<div class="col-sm-7 col-sm-offset-1 subsection col-sm-pull-4">
+					<div class="col-sm-8 subsection col-sm-pull-4">
 						<div class="gallery flex">
 							<?php echo photo_gallery(1); ?>
 						</div>
@@ -95,34 +96,14 @@ get_header(); ?>
 			</div>
 		</div>
 	</section>
-
-	<section class="home__more">
-		<div class="container">
-			<div class="row text-center">
-				<h2 class="section-intro"><?php echo $ticket_section_title ?></h2>
-
-				<?php
-					$loop = new WP_Query(array('post_type' => 'ticket', 'orderby' => 'post_id', 'order' => 'ASC'));
-				?>
-
-				<?php
-					while ($loop->have_posts()) : $loop->the_post() ?>
-					<div class="col-sm-10 col-sm-offset-1 ticket">
-						<div class="col-sm-4 ticket-preview">
-							<img src="<?php the_field('ticket_preview_image'); ?>" alt="ticket preview" class="img-responsive">
-						</div>
-						<div class="col-sm-8 flex--column text-left ticket-info">
-							<h3><?php the_title(); ?></h3>
-							<h4>Available From: <?php the_field('ticket_available'); ?></h4>
-							<p><?php the_field('ticket_desc'); ?></p>
-							<a href="<?php the_field('ticket_link'); ?>" target="_blank" class="link-reset ticket-book">Book</a>
-							<div class="ticket-price vs-dark">
-								<h3><?php the_field('ticket_price'); ?></h3>
-							</div>
-						</div>
-					</div>
-
-				<?php endwhile; ?>
+	
+	<section class="home__transition transition-featured">
+		<div class="container-fluid">
+			<div class="row">
+				<div class="transition__content text-center">
+					<h1>Lorem ipsum dolor sit.</h1>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed, sit.</p>
+				</div>
 			</div>
 		</div>
 	</section>

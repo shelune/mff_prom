@@ -27,4 +27,35 @@ get_header(); ?>
 	</div>
 </section>
 
+<section class="home__more">
+	<div class="container">
+		<div class="row text-center">
+			<h2 class="section-intro"><?php echo $ticket_section_title ?></h2>
+
+			<?php
+	$loop = new WP_Query(array('post_type' => 'ticket', 'orderby' => 'post_id', 'order' => 'ASC'));
+			?>
+
+			<?php
+			while ($loop->have_posts()) : $loop->the_post() ?>
+			<div class="col-sm-12 ticket">
+				<div class="col-sm-4 ticket-preview">
+					<img src="<?php the_field('ticket_preview_image'); ?>" alt="ticket preview" class="img-responsive">
+				</div>
+				<div class="col-sm-8 flex--column text-left ticket-info">
+					<h3><?php the_title(); ?></h3>
+					<h4>Available From: <?php the_field('ticket_available'); ?></h4>
+					<p><?php the_field('ticket_desc'); ?></p>
+					<a href="<?php the_field('ticket_link'); ?>" target="_blank" class="link-reset ticket-book">Book</a>
+					<div class="ticket-price vs-dark">
+						<h3><?php the_field('ticket_price'); ?></h3>
+					</div>
+				</div>
+			</div>
+
+			<?php endwhile; ?>
+		</div>
+	</div>
+</section>
+
 <?php get_footer(); ?>
