@@ -33,12 +33,12 @@ get_header(); ?>
 			<h2 class="subtitle text-center vs-dark bg-dark flex-item--pull-up"><?php bloginfo('description') ?></h2>
 
 			<div class="container">
-				<ul class="site-anchors flex flex--center list-reset">
+				<ul class="site-anchors flex flex--around list-reset">
 					<li><a class="anchor text-center bg-btn vs-dark" href="news">News</a></li>
 					<li><a class="anchor text-center bg-btn vs-dark" href="programs">Program</a></li>
 					<li><a class="anchor text-center bg-btn vs-dark" href="performers">Performers</a></li>
 					<li><a class="anchor text-center bg-btn vs-dark" href="media">Media</a></li>
-					<li><a class="anchor text-center bg-btn vs-dark" href="about">About</a></li>
+					<li><a class="anchor text-center bg-btn vs-dark" href="about">Info</a></li>
 				</ul>
 			</div>
 		</div>

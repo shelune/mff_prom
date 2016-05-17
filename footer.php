@@ -22,7 +22,7 @@
 							<li><a class="vs-dark" href="performers">Performers</a></li>
                             <li><a class="vs-dark" href="programs">Program</a></li>
                             <li><a class="vs-dark" href="media">Media</a></li>
-                            <li><a class="vs-dark" href="about">About</a></li>
+                            <li><a class="vs-dark" href="about">Info</a></li>
                         </ul>
                     </nav>
                 </div>
@@ -36,7 +36,10 @@
         </footer>
 
 <!-- Core Javascript -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script
+		src="https://code.jquery.com/jquery-2.2.3.min.js"
+		integrity="sha256-a23g1Nt4dtEYOj7bR+vTu7+T8VP13humZFBJNIYoEJo="
+		crossorigin="anonymous"></script>
 <script src="<?php bloginfo('template_directory'); ?>/assets/js/bootstrap.min.js"></script>
 <script src="<?php bloginfo('template_directory'); ?>/assets/js/main.js"></script>
 

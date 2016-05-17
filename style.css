@@ -536,6 +536,7 @@ body {
     /* for global transition but turned off for now */
     font-family: 'Proxima Reg', sans-serif;
 	margin-top: 50px;
+	overflow: auto;
 }
 
 .site > section:not(:first-of-type) {
@@ -572,8 +573,10 @@ body {
     width: 100%;
 }
 
-.home .navbar-wrapper {
-	display: none;
+.home .navbar-fixed-top {
+	z-index: 99;
+	transform: translateY(-51px);
+	transition: all 0.2s ease;
 }
 
 .home {
@@ -1127,6 +1130,10 @@ article.news-post {
   margin-right: auto;
 }
 
+.navbar--show.navbar--show {
+	transform: translateY(0);
+}
+
 /* ==========================================================================
    EXAMPLE Media Queries for Responsive Design.
    These examples override the primary ('mobile first') styles.
@@ -1172,6 +1179,10 @@ article.news-post {
         width: 100%;
         display: block;
     }
+	
+	.intro__last-year {
+		margin-top: 40px;
+	}
 	
 	.ticket {
 		padding-bottom: 40px;
